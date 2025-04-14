@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Router, Routes } from 'react-router-dom'
 import Signin from './pages/Signin'
 import Path from './constants/Path'
 import Signup from './pages/Signup'
@@ -14,6 +14,7 @@ const App = () => {
   return <BrowserRouter>
     <Routes>
       {/* auth routes */}
+      <Route path="/" element={<Navigate to="/signin" replace />} />
       <Route element={<AuthLayout />}>
         <Route path={Path.SIGNUP} element={<Signup />} />
         <Route path={Path.SIGNIN} element={<Signin />} />

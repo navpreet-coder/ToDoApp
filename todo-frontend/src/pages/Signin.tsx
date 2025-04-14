@@ -4,6 +4,8 @@ import CardWrapper from "../wrappersComponents/CardWrapper";
 import Heading from "../components/Heading";
 import Input from "../components/Input";
 import Button from "../components/Button";
+import RedirectTo from "../components/RedirectTo";
+import Path from "../constants/Path";
 const Signin=()=>{
     const[username,setUsername] = useState('')
     const[password,setPassword] = useState('')
@@ -24,6 +26,7 @@ const Signin=()=>{
             <Input placeholder="Enter Username" text="Username" value={username} onChange={onChangeUsername} />
             <Input placeholder="Enter password" text="Password" value={password} onChange={onChangePassword} />
             <Button btnTxt={'Sign In'} onClick={onClickSignIn}/>
+            <RedirectTo txt1={"Don't have an Account?"} txt2={'SignUp'} to={Path.SIGNUP}/>
         </CardWrapper>
     </BackgroundWrapper>
 }
