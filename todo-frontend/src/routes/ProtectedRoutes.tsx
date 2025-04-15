@@ -7,7 +7,8 @@ type Props = {
 // const ProtectedRoutes = ({ children }: { children: ReactElement }) => {
 const ProtectedRoutes = ({ children }:Props) => {
     const isAuthenticated = localStorage.getItem('token')
-
+    console.log('see is authenticated',isAuthenticated);
+    
     if (!isAuthenticated) {
         return <Navigate to={Path.SIGNIN} replace />
     }

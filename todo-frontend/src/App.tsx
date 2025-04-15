@@ -14,7 +14,9 @@ const App = () => {
   return <BrowserRouter>
     <Routes>
       {/* auth routes */}
-      <Route path="/" element={<Navigate to="/signin" replace />} />
+      <Route path="/" element={localStorage.getItem('token')
+        ? <Navigate to={Path.HOME} replace />
+        : <Navigate to={Path.SIGNIN} replace />} />
       <Route element={<AuthLayout />}>
         <Route path={Path.SIGNUP} element={<Signup />} />
         <Route path={Path.SIGNIN} element={<Signin />} />

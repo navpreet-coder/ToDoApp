@@ -2,11 +2,11 @@ import { Outlet } from "react-router-dom"
 import Names from "../constants/Names";
 
 const AuthLayout = () => {
-    return <div className="bg-yellow-50 ">
-        <div className="flex flex-row bg-amber-300 items-center justify-center">
+    return <div className=" min-h-screen w-full">
+        <div className="flex flex-col sm:flex-row bg-green-100 items-center justify-center gap-2 p-4">
 
-        <img width="50" height="50" src="https://img.icons8.com/nolan/64/tasklist.png" alt="tasklist" />
-        <h2 className="font-extrabold text-4xl text-amber-600">{Names.APP_NAME}</h2>
+        <img className="w-12 h-12" src="https://img.icons8.com/nolan/64/tasklist.png" alt="logo" />
+        <h2 className="font-extrabold text-xl sm:text-3xl text-amber-600 text-center">{Names.APP_NAME}</h2>
         </div>
         <Outlet />
     </div>

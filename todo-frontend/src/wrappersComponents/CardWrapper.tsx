@@ -4,6 +4,6 @@ type props = {
 }
 export default function CardWrapper({ children }: props) {
     return (
-        <div className='bg-pink-200 w-2xl h-3/4 items-center justify-center p-5'>{children}</div>
+        <div className='bg-yellow-100 w-full max-w-md h-max flex flex-col items-center justify-center p-5 rounded-lg shadow-md'>{children}</div>
     )
 }
