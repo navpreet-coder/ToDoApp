@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom"
+import Header from "../components/Header";
 
 const DashboardLayout=()=>{
     return<div>
-        <header>Header</header>
-        <aside>Sidebar</aside>
+        <Header/>
+        {/* <aside>Sidebar</aside> */}
         <main>
             <Outlet/>
         </main>
